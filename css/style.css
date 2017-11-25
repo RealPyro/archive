@@ -52,3 +52,52 @@
 	color: #ccc;
     text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
   }
+
+  
+ .back {
+  display: inline-block;
+  position: fixed;
+  top:1em;
+  left:1em;
+  z-index:99;
+}
+
+.back a{
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.left {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: 0.35em solid #fff;
+  border-radius: 50%;
+  transition: border ease-in-out 0.2s;
+}
+
+.left:after {
+  content: '';
+	display: inline-block;
+  margin-top: 0.825em;
+  margin-left: 1em;
+  width: 1em;
+  height: 1em;
+  border-top: 0.35em solid #fff;
+  border-right: 0.35em solid #fff;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  transition: border ease-in-out 0.21s;
+}
+
+.left:hover{
+	border: 0.35em solid #4db8ff;
+	transition: border ease-in-out 0.21s;
+}
+
+.left:hover::after{
+	border-top: 0.35em solid #4db8ff;
+   border-right: 0.35em solid #4db8ff;
+	transition: border ease-in-out 0.21s;
+}
